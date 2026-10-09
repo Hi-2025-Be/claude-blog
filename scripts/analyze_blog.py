@@ -608,10 +608,12 @@ READABILITY_MODELS: dict[str, dict[str, Any]] = {
     # Consigna 214, 29-32. L = 206.84 - 0.60 P - 1.02 F, with P = syllables per
     # 100 words and F = sentences per 100 words. Interpretation follows
     # Flesch's classes (60-70 normal, 70-80 fairly easy).
+    # P2P4YOU fork: mobile-first blog content where "easy" (80-90) is the goal,
+    # so the full score extends to 90. Upstream keeps the conservative 60-80.
     'fernandez-huerta': {
         'label': 'Fernández-Huerta',
-        'bands': ((60, 80, 7), (55, 85, 5), (45, 90, 3)),
-        'target': '60-80',
+        'bands': ((60, 90, 7), (55, 93, 5), (45, 96, 3)),
+        'target': '60-90',
     },
     # Martins, T. B. F., Ghiraldelo, C. M., Nunes, M. G. V. & Oliveira Jr.,
     # O. N. (1996). "Readability formulas applied to textbooks in Brazilian

@@ -232,8 +232,9 @@ def test_ukrainian_uses_oborneva_as_flagged_approximation():
 @pytest.mark.parametrize(
     ("model", "score", "points"),
     [
-        ("fernandez-huerta", 70, 7), ("fernandez-huerta", 83, 5),
-        ("fernandez-huerta", 88, 3), ("fernandez-huerta", 95, 1),
+        ("fernandez-huerta", 70, 7), ("fernandez-huerta", 83, 7),
+        ("fernandez-huerta", 88, 7), ("fernandez-huerta", 95, 3),
+        ("fernandez-huerta", 98, 1),
         ("flesch-pt", 60, 7), ("flesch-pt", 78, 5), ("flesch-pt", 30, 1),
         ("oborneva", 65, 7), ("oborneva-uk", 50, 3),
     ],
